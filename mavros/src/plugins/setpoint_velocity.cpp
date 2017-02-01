@@ -69,7 +69,7 @@ private:
 		 * Documentation start from bit 1 instead 0;
 		 * Ignore position and accel vectors, yaw.
 		 */
-		uint16_t ignore_all_except_v_xyz_yr = (1 << 10) | (7 << 6) | (7 << 0);
+		uint16_t ignore_all_except_v_xyz_yr = (3 << 10) | (7 << 6) | (7 << 0);
 
 		auto vel = ftf::transform_frame_enu_ned(vel_enu);
 		auto yr = ftf::transform_frame_baselink_aircraft(Eigen::Vector3d(0.0, 0.0, yaw_rate));
